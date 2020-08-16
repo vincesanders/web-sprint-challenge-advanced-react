@@ -5,7 +5,7 @@ const useForm = initialValue => {
     const [formState, setFormState] = useState(initialValue);
 
     const handleChanges = (e) => {
-        setValues({ ...formState, [e.target.name]: e.target.value });
+        setFormState({ ...formState, [e.target.name]: e.target.value });
     };
 
     return [formState, handleChanges];
